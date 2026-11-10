@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Examination Portal</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>ONLINE EXAMINATION PORTAL</h1>
+    <p>Student Examination Management System</p>
+</header>
+
+<div class="container">
+
+    <!-- LOGIN PAGE -->
+    <div id="login" class="card">
+        <h2>Student Login</h2>
+
+        <input type="text" id="name"
+            placeholder="Enter Student Name">
+
+        <input type="text" id="roll"
+            placeholder="Enter Roll Number">
+
+        <input type="password" id="password"
+            placeholder="Enter Password">
+
+        <button onclick="loginUser()">Login</button>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="hidden">
+
+        <div class="card">
+            <h2 id="welcome"></h2>
+            <p>Welcome to your online examination dashboard.</p>
+        </div>
+
+        <div class="exam-card">
+            <h3>Unit I - HTML Fundamentals</h3>
+            <p>HTML5, Elements, Attributes, Links and Images</p>
+            <button onclick="startExam('html')">Start HTML Exam</button>
+        </div>
+
+        <div class="exam-card">
+            <h3>Unit II - Semantic HTML and Forms</h3>
+            <p>Forms, Tables, Accessibility and Semantic Elements</p>
+            <button onclick="startExam('semantic')">Start Semantic HTML Exam</button>
+        </div>
+
+        <div class="exam-card">
+            <h3>Unit III - CSS</h3>
+            <p>Selectors, Flexbox, Grid and Responsive Design</p>
+            <button onclick="startExam('css')">Start CSS Exam</button>
+        </div>
+
+        <div class="exam-card">
+            <h3>Unit IV - JavaScript</h3>
+            <p>Variables, Functions, Arrays and Objects</p>
+            <button onclick="startExam('js')">Start JavaScript Exam</button>
+        </div>
+
+    </div>
+
+    <!-- EXAMINATION PAGE -->
+    <div id="exam" class="hidden">
+
+        <div class="card">
+
+            <h2 id="examTitle">Online Examination</h2>
+
+            <div class="timer">
+                Time Left: <span id="time">05:00</span>
+            </div>
+
+            <hr>
+
+            <h3 id="question"></h3>
+
+            <div id="options"></div>
+
+            <br>
+
+            <button onclick="previousQuestion()">Previous</button>
+            <button onclick="markReview()">Mark for Review</button>
+            <button onclick="nextQuestion()">Save & Next</button>
+            <button onclick="submitExam()">Submit Exam</button>
+
+        </div>
+
+        <div class="card">
+            <h3>Question Navigation</h3>
+            <div id="palette" class="palette"></div>
+            <p id="progress"></p>
+        </div>
+
+    </div>
+
+    <!-- RESULT PAGE -->
+    <div id="resultPage" class="card hidden">
+
+        <h2>Examination Result</h2>
+
+        <p id="result"></p>
+        <p id="percentage"></p>
+
+        <h3>Answer Review</h3>
+
+        <div id="review"></div>
+
+        <button onclick="location.reload()">Logout</button>
+
+    </div>
+
+</div>
+
+<!-- External JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>

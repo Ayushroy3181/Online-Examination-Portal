@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+header {
+    background: #14213d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #0001;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #14213d;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.hidden {
+    display: none;
+}
+
+.exam-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.timer {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: right;
+    margin: 15px 0;
+}
+
+.option {
+    display: block;
+    padding: 12px;
+    margin: 10px 0;
+    background: #f1f5f9;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: #dbeafe;
+}
+
+.option input {
+    width: auto;
+    margin-right: 10px;
+}
+
+#result {
+    font-size: 22px;
+    font-weight: bold;
+    color: green;
+}
+
+.palette button {
+    width: 42px;
+    padding: 10px;
+    margin: 4px;
+}
+
+.palette .answered {
+    background: green;
+}
+
+.palette .review {
+    background: orange;
+}
+
+#progress {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.exam-card h3 {
+    margin-bottom: 10px;
+    color: #14213d;
+}
+
+.exam-card p {
+    margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+    }
+
+    button {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+}
